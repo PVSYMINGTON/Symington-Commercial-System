@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ivpDataset" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="SapIVDPConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SapIVDPConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CommercialSystem.My.MySettings.GlobalReference.Default.SapIVDPConnectionString1" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SapIVDPTableAdapter" GeneratorDataComponentClassName="SapIVDPTableAdapter" Name="SapIVDP" UserDataComponentName="SapIVDPTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SapIVDPConnectionString1 (MySettings)" DbObjectName="main.SapIVDP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Fill" GenerateShortCommands="false" GeneratorSourceName="Fill" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT        origem, pais, Cliente, company, marca, Tipo, Grupo, Subcat, ano, ANO1, ANO2, ANO3, ANO4, ANO5, ANO6, ANO7, ANO8, ANO9, ANO10, ANO11, VNO1, VNO2, VNO3, 
+                         VNO4, VNO5, VNO6, VNO7, VNO8, VNO9, VNO10, VNO11
+FROM            SapIVDP</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="origem" DataSetColumn="origem" />
+              <Mapping SourceColumn="pais" DataSetColumn="pais" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+              <Mapping SourceColumn="company" DataSetColumn="company" />
+              <Mapping SourceColumn="marca" DataSetColumn="marca" />
+              <Mapping SourceColumn="Tipo" DataSetColumn="Tipo" />
+              <Mapping SourceColumn="Grupo" DataSetColumn="Grupo" />
+              <Mapping SourceColumn="Subcat" DataSetColumn="Subcat" />
+              <Mapping SourceColumn="ano" DataSetColumn="ano" />
+              <Mapping SourceColumn="ANO1" DataSetColumn="ANO1" />
+              <Mapping SourceColumn="ANO2" DataSetColumn="ANO2" />
+              <Mapping SourceColumn="ANO3" DataSetColumn="ANO3" />
+              <Mapping SourceColumn="ANO4" DataSetColumn="ANO4" />
+              <Mapping SourceColumn="ANO5" DataSetColumn="ANO5" />
+              <Mapping SourceColumn="ANO6" DataSetColumn="ANO6" />
+              <Mapping SourceColumn="ANO7" DataSetColumn="ANO7" />
+              <Mapping SourceColumn="ANO8" DataSetColumn="ANO8" />
+              <Mapping SourceColumn="ANO9" DataSetColumn="ANO9" />
+              <Mapping SourceColumn="ANO10" DataSetColumn="ANO10" />
+              <Mapping SourceColumn="ANO11" DataSetColumn="ANO11" />
+              <Mapping SourceColumn="VNO1" DataSetColumn="VNO1" />
+              <Mapping SourceColumn="VNO2" DataSetColumn="VNO2" />
+              <Mapping SourceColumn="VNO3" DataSetColumn="VNO3" />
+              <Mapping SourceColumn="VNO4" DataSetColumn="VNO4" />
+              <Mapping SourceColumn="VNO5" DataSetColumn="VNO5" />
+              <Mapping SourceColumn="VNO6" DataSetColumn="VNO6" />
+              <Mapping SourceColumn="VNO7" DataSetColumn="VNO7" />
+              <Mapping SourceColumn="VNO8" DataSetColumn="VNO8" />
+              <Mapping SourceColumn="VNO9" DataSetColumn="VNO9" />
+              <Mapping SourceColumn="VNO10" DataSetColumn="VNO10" />
+              <Mapping SourceColumn="VNO11" DataSetColumn="VNO11" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ivpDataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ivpDataset" msprop:Generator_UserDSName="ivpDataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SapIVDP" msprop:Generator_TableClassName="SapIVDPDataTable" msprop:Generator_TableVarName="tableSapIVDP" msprop:Generator_RowChangedName="SapIVDPRowChanged" msprop:Generator_TablePropName="SapIVDP" msprop:Generator_RowDeletingName="SapIVDPRowDeleting" msprop:Generator_RowChangingName="SapIVDPRowChanging" msprop:Generator_RowEvHandlerName="SapIVDPRowChangeEventHandler" msprop:Generator_RowDeletedName="SapIVDPRowDeleted" msprop:Generator_RowClassName="SapIVDPRow" msprop:Generator_UserTableName="SapIVDP" msprop:Generator_RowEvArgName="SapIVDPRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="origem" msprop:Generator_ColumnVarNameInTable="columnorigem" msprop:Generator_ColumnPropNameInRow="origem" msprop:Generator_ColumnPropNameInTable="origemColumn" msprop:Generator_UserColumnName="origem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pais" msprop:Generator_ColumnVarNameInTable="columnpais" msprop:Generator_ColumnPropNameInRow="pais" msprop:Generator_ColumnPropNameInTable="paisColumn" msprop:Generator_UserColumnName="pais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="company" msprop:Generator_ColumnVarNameInTable="columncompany" msprop:Generator_ColumnPropNameInRow="company" msprop:Generator_ColumnPropNameInTable="companyColumn" msprop:Generator_UserColumnName="company" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grupo" msprop:Generator_ColumnVarNameInTable="columnGrupo" msprop:Generator_ColumnPropNameInRow="Grupo" msprop:Generator_ColumnPropNameInTable="GrupoColumn" msprop:Generator_UserColumnName="Grupo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subcat" msprop:Generator_ColumnVarNameInTable="columnSubcat" msprop:Generator_ColumnPropNameInRow="Subcat" msprop:Generator_ColumnPropNameInTable="SubcatColumn" msprop:Generator_UserColumnName="Subcat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ano" msprop:Generator_ColumnVarNameInTable="columnano" msprop:Generator_ColumnPropNameInRow="ano" msprop:Generator_ColumnPropNameInTable="anoColumn" msprop:Generator_UserColumnName="ano" type="xs:int" minOccurs="0" />
+              <xs:element name="ANO1" msprop:Generator_ColumnVarNameInTable="columnANO1" msprop:Generator_ColumnPropNameInRow="ANO1" msprop:Generator_ColumnPropNameInTable="ANO1Column" msprop:Generator_UserColumnName="ANO1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO2" msprop:Generator_ColumnVarNameInTable="columnANO2" msprop:Generator_ColumnPropNameInRow="ANO2" msprop:Generator_ColumnPropNameInTable="ANO2Column" msprop:Generator_UserColumnName="ANO2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO3" msprop:Generator_ColumnVarNameInTable="columnANO3" msprop:Generator_ColumnPropNameInRow="ANO3" msprop:Generator_ColumnPropNameInTable="ANO3Column" msprop:Generator_UserColumnName="ANO3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO4" msprop:Generator_ColumnVarNameInTable="columnANO4" msprop:Generator_ColumnPropNameInRow="ANO4" msprop:Generator_ColumnPropNameInTable="ANO4Column" msprop:Generator_UserColumnName="ANO4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO5" msprop:Generator_ColumnVarNameInTable="columnANO5" msprop:Generator_ColumnPropNameInRow="ANO5" msprop:Generator_ColumnPropNameInTable="ANO5Column" msprop:Generator_UserColumnName="ANO5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO6" msprop:Generator_ColumnVarNameInTable="columnANO6" msprop:Generator_ColumnPropNameInRow="ANO6" msprop:Generator_ColumnPropNameInTable="ANO6Column" msprop:Generator_UserColumnName="ANO6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO7" msprop:Generator_ColumnVarNameInTable="columnANO7" msprop:Generator_ColumnPropNameInRow="ANO7" msprop:Generator_ColumnPropNameInTable="ANO7Column" msprop:Generator_UserColumnName="ANO7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO8" msprop:Generator_ColumnVarNameInTable="columnANO8" msprop:Generator_ColumnPropNameInRow="ANO8" msprop:Generator_ColumnPropNameInTable="ANO8Column" msprop:Generator_UserColumnName="ANO8" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO9" msprop:Generator_ColumnVarNameInTable="columnANO9" msprop:Generator_ColumnPropNameInRow="ANO9" msprop:Generator_ColumnPropNameInTable="ANO9Column" msprop:Generator_UserColumnName="ANO9" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO10" msprop:Generator_ColumnVarNameInTable="columnANO10" msprop:Generator_ColumnPropNameInRow="ANO10" msprop:Generator_ColumnPropNameInTable="ANO10Column" msprop:Generator_UserColumnName="ANO10" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ANO11" msprop:Generator_ColumnVarNameInTable="columnANO11" msprop:Generator_ColumnPropNameInRow="ANO11" msprop:Generator_ColumnPropNameInTable="ANO11Column" msprop:Generator_UserColumnName="ANO11" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO1" msprop:Generator_ColumnVarNameInTable="columnVNO1" msprop:Generator_ColumnPropNameInRow="VNO1" msprop:Generator_ColumnPropNameInTable="VNO1Column" msprop:Generator_UserColumnName="VNO1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO2" msprop:Generator_ColumnVarNameInTable="columnVNO2" msprop:Generator_ColumnPropNameInRow="VNO2" msprop:Generator_ColumnPropNameInTable="VNO2Column" msprop:Generator_UserColumnName="VNO2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO3" msprop:Generator_ColumnVarNameInTable="columnVNO3" msprop:Generator_ColumnPropNameInRow="VNO3" msprop:Generator_ColumnPropNameInTable="VNO3Column" msprop:Generator_UserColumnName="VNO3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO4" msprop:Generator_ColumnVarNameInTable="columnVNO4" msprop:Generator_ColumnPropNameInRow="VNO4" msprop:Generator_ColumnPropNameInTable="VNO4Column" msprop:Generator_UserColumnName="VNO4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO5" msprop:Generator_ColumnVarNameInTable="columnVNO5" msprop:Generator_ColumnPropNameInRow="VNO5" msprop:Generator_ColumnPropNameInTable="VNO5Column" msprop:Generator_UserColumnName="VNO5" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO6" msprop:Generator_ColumnVarNameInTable="columnVNO6" msprop:Generator_ColumnPropNameInRow="VNO6" msprop:Generator_ColumnPropNameInTable="VNO6Column" msprop:Generator_UserColumnName="VNO6" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO7" msprop:Generator_ColumnVarNameInTable="columnVNO7" msprop:Generator_ColumnPropNameInRow="VNO7" msprop:Generator_ColumnPropNameInTable="VNO7Column" msprop:Generator_UserColumnName="VNO7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO8" msprop:Generator_ColumnVarNameInTable="columnVNO8" msprop:Generator_ColumnPropNameInRow="VNO8" msprop:Generator_ColumnPropNameInTable="VNO8Column" msprop:Generator_UserColumnName="VNO8" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO9" msprop:Generator_ColumnVarNameInTable="columnVNO9" msprop:Generator_ColumnPropNameInRow="VNO9" msprop:Generator_ColumnPropNameInTable="VNO9Column" msprop:Generator_UserColumnName="VNO9" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO10" msprop:Generator_ColumnVarNameInTable="columnVNO10" msprop:Generator_ColumnPropNameInRow="VNO10" msprop:Generator_ColumnPropNameInTable="VNO10Column" msprop:Generator_UserColumnName="VNO10" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VNO11" msprop:Generator_ColumnVarNameInTable="columnVNO11" msprop:Generator_ColumnPropNameInRow="VNO11" msprop:Generator_ColumnPropNameInTable="VNO11Column" msprop:Generator_UserColumnName="VNO11" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TradeSymHistorico" msprop:Generator_TableClassName="TradeSymHistoricoDataTable" msprop:Generator_TableVarName="tableTradeSymHistorico" msprop:Generator_RowChangedName="TradeSymHistoricoRowChanged" msprop:Generator_TablePropName="TradeSymHistorico" msprop:Generator_RowDeletingName="TradeSymHistoricoRowDeleting" msprop:Generator_RowChangingName="TradeSymHistoricoRowChanging" msprop:Generator_RowEvHandlerName="TradeSymHistoricoRowChangeEventHandler" msprop:Generator_RowDeletedName="TradeSymHistoricoRowDeleted" msprop:Generator_RowClassName="TradeSymHistoricoRow" msprop:Generator_UserTableName="TradeSymHistorico" msprop:Generator_RowEvArgName="TradeSymHistoricoRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="origem" msprop:Generator_ColumnVarNameInTable="columnorigem" msprop:Generator_ColumnPropNameInRow="origem" msprop:Generator_ColumnPropNameInTable="origemColumn" msprop:Generator_UserColumnName="origem" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pais" msprop:Generator_ColumnVarNameInTable="columnpais" msprop:Generator_ColumnPropNameInRow="pais" msprop:Generator_ColumnPropNameInTable="paisColumn" msprop:Generator_UserColumnName="pais" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="company" msprop:Generator_ColumnVarNameInTable="columncompany" msprop:Generator_ColumnPropNameInRow="company" msprop:Generator_ColumnPropNameInTable="companyColumn" msprop:Generator_UserColumnName="company" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" msprop:Generator_UserColumnName="Tipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Grupo" msprop:Generator_ColumnVarNameInTable="columnGrupo" msprop:Generator_ColumnPropNameInRow="Grupo" msprop:Generator_ColumnPropNameInTable="GrupoColumn" msprop:Generator_UserColumnName="Grupo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Subcat" msprop:Generator_ColumnVarNameInTable="columnSubcat" msprop:Generator_ColumnPropNameInRow="Subcat" msprop:Generator_ColumnPropNameInTable="SubcatColumn" msprop:Generator_UserColumnName="Subcat" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ANO1" msprop:Generator_ColumnVarNameInTable="columnANO1" msprop:Generator_ColumnPropNameInRow="ANO1" msprop:Generator_ColumnPropNameInTable="ANO1Column" msprop:Generator_UserColumnName="ANO1" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO2" msprop:Generator_ColumnVarNameInTable="columnANO2" msprop:Generator_ColumnPropNameInRow="ANO2" msprop:Generator_ColumnPropNameInTable="ANO2Column" msprop:Generator_UserColumnName="ANO2" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO3" msprop:Generator_ColumnVarNameInTable="columnANO3" msprop:Generator_ColumnPropNameInRow="ANO3" msprop:Generator_ColumnPropNameInTable="ANO3Column" msprop:Generator_UserColumnName="ANO3" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO4" msprop:Generator_ColumnVarNameInTable="columnANO4" msprop:Generator_ColumnPropNameInRow="ANO4" msprop:Generator_ColumnPropNameInTable="ANO4Column" msprop:Generator_UserColumnName="ANO4" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO5" msprop:Generator_ColumnVarNameInTable="columnANO5" msprop:Generator_ColumnPropNameInRow="ANO5" msprop:Generator_ColumnPropNameInTable="ANO5Column" msprop:Generator_UserColumnName="ANO5" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO6" msprop:Generator_ColumnVarNameInTable="columnANO6" msprop:Generator_ColumnPropNameInRow="ANO6" msprop:Generator_ColumnPropNameInTable="ANO6Column" msprop:Generator_UserColumnName="ANO6" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO7" msprop:Generator_ColumnVarNameInTable="columnANO7" msprop:Generator_ColumnPropNameInRow="ANO7" msprop:Generator_ColumnPropNameInTable="ANO7Column" msprop:Generator_UserColumnName="ANO7" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO8" msprop:Generator_ColumnVarNameInTable="columnANO8" msprop:Generator_ColumnPropNameInRow="ANO8" msprop:Generator_ColumnPropNameInTable="ANO8Column" msprop:Generator_UserColumnName="ANO8" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO9" msprop:Generator_ColumnVarNameInTable="columnANO9" msprop:Generator_ColumnPropNameInRow="ANO9" msprop:Generator_ColumnPropNameInTable="ANO9Column" msprop:Generator_UserColumnName="ANO9" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO10" msprop:Generator_ColumnVarNameInTable="columnANO10" msprop:Generator_ColumnPropNameInRow="ANO10" msprop:Generator_ColumnPropNameInTable="ANO10Column" msprop:Generator_UserColumnName="ANO10" type="xs:double" minOccurs="0" />
+              <xs:element name="ANO11" msprop:Generator_ColumnVarNameInTable="columnANO11" msprop:Generator_ColumnPropNameInRow="ANO11" msprop:Generator_ColumnPropNameInTable="ANO11Column" msprop:Generator_UserColumnName="ANO11" type="xs:double" minOccurs="0" />
+              <xs:element name="ano" msprop:Generator_ColumnVarNameInTable="columnano" msprop:Generator_ColumnPropNameInRow="ano" msprop:Generator_ColumnPropNameInTable="anoColumn" msprop:Generator_UserColumnName="ano" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

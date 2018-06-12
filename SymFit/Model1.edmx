@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SymFITModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Alertas_ABC">
+          <Key>
+            <PropertyRef Name="Tipologia" />
+          </Key>
+          <Property Name="Tipologia" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Alerta" Type="bit" />
+        </EntityType>
+        <EntityType Name="Alertas_limites">
+          <Key>
+            <PropertyRef Name="Tipo_Alerta" />
+            <PropertyRef Name="month" />
+          </Key>
+          <Property Name="Tipo_Alerta" Type="varchar" MaxLength="23" Nullable="false" />
+          <Property Name="month" Type="int" Nullable="false" />
+          <Property Name="min" Type="numeric" Precision="2" Scale="1" />
+          <Property Name="max" Type="numeric" Precision="2" Scale="1" />
+        </EntityType>
+        <EntityType Name="Forecast">
+          <Key>
+            <PropertyRef Name="GenerationDate" />
+            <PropertyRef Name="InvoiceCustomerCode" />
+            <PropertyRef Name="ForecastCustomerCode" />
+            <PropertyRef Name="ProductCode" />
+            <PropertyRef Name="VintageYear" />
+            <PropertyRef Name="PriceList" />
+            <PropertyRef Name="Currency" />
+          </Key>
+          <Property Name="GenerationDate" Type="date" Nullable="false" />
+          <Property Name="ForecastMarket" Type="varchar" MaxLength="50" />
+          <Property Name="CustomerType" Type="bit" />
+          <Property Name="InvoiceCustomerCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="InvoiceCustomer" Type="varchar" MaxLength="50" />
+          <Property Name="ForecastCustomerCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ForecastCustomer" Type="varchar" MaxLength="50" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VintageYear" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="Package" Type="varchar" MaxLength="50" />
+          <Property Name="PriceList" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="Currency" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="COREorMTF" Type="bit" />
+          <Property Name="InHand" Type="float" />
+          <Property Name="ShipHand" Type="float" />
+          <Property Name="SalesLY" Type="float" />
+          <Property Name="MAT" Type="float" />
+          <Property Name="Target" Type="float" />
+          <Property Name="Target9L" Type="float" />
+          <Property Name="AutomaticForecast" Type="float" />
+          <Property Name="AdjustedForecast" Type="float" />
+          <Property Name="A?" Type="bit" />
+          <Property Name="FinalForecast" Type="float" />
+          <Property Name="AvailableAllocation" Type="float" />
+          <Property Name="MOQ" Type="float" />
+          <Property Name="ForecastAccomplishment" Type="float" StoreGeneratedPattern="Computed" />
+          <Property Name="MATvsFinalForecast" Type="float" StoreGeneratedPattern="Computed" />
+          <Property Name="WarningProductCustomer" Type="int" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="Notes" Type="varchar" MaxLength="1000" />
+          <Property Name="AjustJan" Type="float" />
+          <Property Name="AjustFeb" Type="float" />
+          <Property Name="AjustMar" Type="float" />
+          <Property Name="AjustApr" Type="float" />
+          <Property Name="AjustMay" Type="float" />
+          <Property Name="AjustJun" Type="float" />
+          <Property Name="AjustJul" Type="float" />
+          <Property Name="AjustAug" Type="float" />
+          <Property Name="AjustSep" Type="float" />
+          <Property Name="AjustOct" Type="float" />
+          <Property Name="AjustNov" Type="float" />
+          <Property Name="AjustDec" Type="float" />
+          <Property Name="ForecastJan" Type="float" />
+          <Property Name="ForecastFeb" Type="float" />
+          <Property Name="ForecastMar" Type="float" />
+          <Property Name="ForecastApr" Type="float" />
+          <Property Name="ForecastMay" Type="float" />
+          <Property Name="ForecastJun" Type="float" />
+          <Property Name="ForecastJul" Type="float" />
+          <Property Name="ForecastAug" Type="float" />
+          <Property Name="ForecastSep" Type="float" />
+          <Property Name="ForecastOct" Type="float" />
+          <Property Name="ForecastNov" Type="float" />
+          <Property Name="ForecastDec" Type="float" />
+          <Property Name="WeightsJan" Type="float" />
+          <Property Name="WeightsFeb" Type="float" />
+          <Property Name="WeightsMar" Type="float" />
+          <Property Name="WeightsApr" Type="float" />
+          <Property Name="WeightsMay" Type="float" />
+          <Property Name="WeightsJun" Type="float" />
+          <Property Name="WeightsJul" Type="float" />
+          <Property Name="WeightsAug" Type="float" />
+          <Property Name="WeightsSep" Type="float" />
+          <Property Name="WeightsOct" Type="float" />
+          <Property Name="WeightsNov" Type="float" />
+          <Property Name="WeightsDec" Type="float" />
+          <Property Name="ProductName" Type="varchar" MaxLength="50" />
+          <Property Name="PackageCapacity" Type="numeric" Precision="6" Scale="3" />
+          <Property Name="FinalForecast9L" Type="float" StoreGeneratedPattern="Computed" />
+          <Property Name="WarningAllocation" Type="bit" />
+          <Property Name="FAmin" Type="float" />
+          <Property Name="FAmax" Type="float" />
+          <Property Name="MATFORmin" Type="float" />
+          <Property Name="MATFORmax" Type="float" />
+          <Property Name="timestamp" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SymFIT.dbo.Customer_MDMMMA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Customer_MDMMMA">
+          <Key>
+            <PropertyRef Name="CustomerCode" />
+            <PropertyRef Name="CustomerCodeMD" />
+            <PropertyRef Name="CustomerCodeMM" />
+            <PropertyRef Name="CustomerCodeMA" />
+          </Key>
+          <Property Name="CustomerCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerMarket" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerCodeMD" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MD" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerCodeMM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MM" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerCodeMA" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MA" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SymFIT.dbo.Forecast_Product' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Forecast_Product">
+          <Key>
+            <PropertyRef Name="GenerationDate" />
+            <PropertyRef Name="ProductCode" />
+            <PropertyRef Name="VintageYear" />
+            <PropertyRef Name="AvailableAllocation" />
+            <PropertyRef Name="ForecastAccomplishment" />
+            <PropertyRef Name="MATvsFinalForecast" />
+            <PropertyRef Name="Notes" />
+          </Key>
+          <Property Name="GenerationDate" Type="date" Nullable="false" />
+          <Property Name="Brand" Type="varchar" MaxLength="50" />
+          <Property Name="ProductCode" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VintageYear" Type="varchar" MaxLength="4" Nullable="false" />
+          <Property Name="Package" Type="varchar" MaxLength="50" />
+          <Property Name="COREorMTF" Type="bit" />
+          <Property Name="InHand" Type="float" />
+          <Property Name="ShipHand" Type="float" />
+          <Property Name="SalesLY" Type="float" />
+          <Property Name="MAT" Type="float" />
+          <Property Name="Target" Type="float" />
+          <Property Name="Target9L" Type="float" />
+          <Property Name="AutomaticForecast" Type="float" />
+          <Property Name="AdjustedForecast" Type="float" />
+          <Property Name="FinalForecast" Type="float" />
+          <Property Name="AvailableAllocation" Type="int" Nullable="false" />
+          <Property Name="ForecastAccomplishment" Type="float" Nullable="false" />
+          <Property Name="MATvsFinalForecast" Type="float" Nullable="false" />
+          <Property Name="Warning" Type="bit" />
+          <Property Name="Notes" Type="varchar" MaxLength="1" Nullable="false" />
+          <Property Name="ForecastJan" Type="float" />
+          <Property Name="ForecastFeb" Type="float" />
+          <Property Name="ForecastMar" Type="float" />
+          <Property Name="ForecastApr" Type="float" />
+          <Property Name="ForecastMay" Type="float" />
+          <Property Name="ForecastJun" Type="float" />
+          <Property Name="ForecastJul" Type="float" />
+          <Property Name="ForecastAug" Type="float" />
+          <Property Name="ForecastSep" Type="float" />
+          <Property Name="ForecastOct" Type="float" />
+          <Property Name="ForecastNov" Type="float" />
+          <Property Name="ForecastDec" Type="float" />
+        </EntityType>
+        <EntityContainer Name="SymFITModelStoreContainer">
+          <EntitySet Name="Alertas_ABC" EntityType="Self.Alertas_ABC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Alertas_limites" EntityType="Self.Alertas_limites" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Forecast" EntityType="Self.Forecast" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Customer_MDMMMA" EntityType="Self.Customer_MDMMMA" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Customer_MDMMMA].[CustomerCode] AS [CustomerCode], 
+    [Customer_MDMMMA].[CustomerName] AS [CustomerName], 
+    [Customer_MDMMMA].[CustomerMarket] AS [CustomerMarket], 
+    [Customer_MDMMMA].[CustomerCodeMD] AS [CustomerCodeMD], 
+    [Customer_MDMMMA].[MD] AS [MD], 
+    [Customer_MDMMMA].[CustomerCodeMM] AS [CustomerCodeMM], 
+    [Customer_MDMMMA].[MM] AS [MM], 
+    [Customer_MDMMMA].[CustomerCodeMA] AS [CustomerCodeMA], 
+    [Customer_MDMMMA].[MA] AS [MA]
+    FROM [dbo].[Customer_MDMMMA] AS [Customer_MDMMMA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Forecast_Product" EntityType="Self.Forecast_Product" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Forecast_Product].[GenerationDate] AS [GenerationDate], 
+    [Forecast_Product].[Brand] AS [Brand], 
+    [Forecast_Product].[ProductCode] AS [ProductCode], 
+    [Forecast_Product].[VintageYear] AS [VintageYear], 
+    [Forecast_Product].[Package] AS [Package], 
+    [Forecast_Product].[COREorMTF] AS [COREorMTF], 
+    [Forecast_Product].[InHand] AS [InHand], 
+    [Forecast_Product].[ShipHand] AS [ShipHand], 
+    [Forecast_Product].[SalesLY] AS [SalesLY], 
+    [Forecast_Product].[MAT] AS [MAT], 
+    [Forecast_Product].[Target] AS [Target], 
+    [Forecast_Product].[Target9L] AS [Target9L], 
+    [Forecast_Product].[AutomaticForecast] AS [AutomaticForecast], 
+    [Forecast_Product].[AdjustedForecast] AS [AdjustedForecast], 
+    [Forecast_Product].[FinalForecast] AS [FinalForecast], 
+    [Forecast_Product].[AvailableAllocation] AS [AvailableAllocation], 
+    [Forecast_Product].[ForecastAccomplishment] AS [ForecastAccomplishment], 
+    [Forecast_Product].[MATvsFinalForecast] AS [MATvsFinalForecast], 
+    [Forecast_Product].[Warning] AS [Warning], 
+    [Forecast_Product].[Notes] AS [Notes], 
+    [Forecast_Product].[ForecastJan] AS [ForecastJan], 
+    [Forecast_Product].[ForecastFeb] AS [ForecastFeb], 
+    [Forecast_Product].[ForecastMar] AS [ForecastMar], 
+    [Forecast_Product].[ForecastApr] AS [ForecastApr], 
+    [Forecast_Product].[ForecastMay] AS [ForecastMay], 
+    [Forecast_Product].[ForecastJun] AS [ForecastJun], 
+    [Forecast_Product].[ForecastJul] AS [ForecastJul], 
+    [Forecast_Product].[ForecastAug] AS [ForecastAug], 
+    [Forecast_Product].[ForecastSep] AS [ForecastSep], 
+    [Forecast_Product].[ForecastOct] AS [ForecastOct], 
+    [Forecast_Product].[ForecastNov] AS [ForecastNov], 
+    [Forecast_Product].[ForecastDec] AS [ForecastDec]
+    FROM [dbo].[Forecast_Product] AS [Forecast_Product]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SymFITModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SymFITEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Forecast" EntityType="SymFITModel.Forecast" />
+          <EntitySet Name="Forecast_Product" EntityType="SymFITModel.Forecast_Product" />
+          <EntitySet Name="Customer_MDMMMA" EntityType="SymFITModel.Customer_MDMMMA" />
+          <EntitySet Name="Alertas_limites" EntityType="SymFITModel.Alertas_limites" />
+          <EntitySet Name="Alertas_ABC" EntityType="SymFITModel.Alertas_ABC" />
+        </EntityContainer>
+        <EntityType Name="Forecast">
+          <Key>
+            <PropertyRef Name="GenerationDate" />
+            <PropertyRef Name="InvoiceCustomerCode" />
+            <PropertyRef Name="ForecastCustomerCode" />
+            <PropertyRef Name="ProductCode" />
+            <PropertyRef Name="VintageYear" />
+            <PropertyRef Name="PriceList" />
+            <PropertyRef Name="Currency" />
+          </Key>
+          <Property Name="GenerationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ForecastMarket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CustomerType" Type="Boolean" />
+          <Property Name="InvoiceCustomerCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="InvoiceCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ForecastCustomerCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ForecastCustomer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VintageYear" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Package" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PriceList" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="Currency" Type="String" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="COREorMTF" Type="Boolean" />
+          <Property Name="InHand" Type="Double" />
+          <Property Name="ShipHand" Type="Double" />
+          <Property Name="SalesLY" Type="Double" />
+          <Property Name="MAT" Type="Double" />
+          <Property Name="Target" Type="Double" />
+          <Property Name="AutomaticForecast" Type="Double" />
+          <Property Name="AdjustedForecast" Type="Double" />
+          <Property Name="A_" Type="Boolean" />
+          <Property Name="FinalForecast" Type="Double" />
+          <Property Name="AvailableAllocation" Type="Double" />
+          <Property Name="MOQ" Type="Double" />
+          <Property Name="ForecastAccomplishment" Type="Double" />
+          <Property Name="MATvsFinalForecast" Type="Double" />
+          <Property Name="WarningProductCustomer" Type="Int16" Nullable="false" />
+          <Property Name="Notes" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AjustJan" Type="Double" />
+          <Property Name="AjustFeb" Type="Double" />
+          <Property Name="AjustMar" Type="Double" />
+          <Property Name="AjustApr" Type="Double" />
+          <Property Name="AjustMay" Type="Double" />
+          <Property Name="AjustJun" Type="Double" />
+          <Property Name="AjustJul" Type="Double" />
+          <Property Name="AjustAug" Type="Double" />
+          <Property Name="AjustSep" Type="Double" />
+          <Property Name="AjustOct" Type="Double" />
+          <Property Name="AjustNov" Type="Double" />
+          <Property Name="AjustDec" Type="Double" />
+          <Property Name="ForecastJan" Type="Double" />
+          <Property Name="ForecastFeb" Type="Double" />
+          <Property Name="ForecastMar" Type="Double" />
+          <Property Name="ForecastApr" Type="Double" />
+          <Property Name="ForecastMay" Type="Double" />
+          <Property Name="ForecastJun" Type="Double" />
+          <Property Name="ForecastJul" Type="Double" />
+          <Property Name="ForecastAug" Type="Double" />
+          <Property Name="ForecastSep" Type="Double" />
+          <Property Name="ForecastOct" Type="Double" />
+          <Property Name="ForecastNov" Type="Double" />
+          <Property Name="ForecastDec" Type="Double" />
+          <Property Name="WeightsJan" Type="Double" />
+          <Property Name="WeightsFeb" Type="Double" />
+          <Property Name="WeightsMar" Type="Double" />
+          <Property Name="WeightsApr" Type="Double" />
+          <Property Name="WeightsMay" Type="Double" />
+          <Property Name="WeightsJun" Type="Double" />
+          <Property Name="WeightsJul" Type="Double" />
+          <Property Name="WeightsAug" Type="Double" />
+          <Property Name="WeightsSep" Type="Double" />
+          <Property Name="WeightsOct" Type="Double" />
+          <Property Name="WeightsNov" Type="Double" />
+          <Property Name="WeightsDec" Type="Double" />
+          <Property Name="Target9L" Type="Double" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PackageCapacity" Type="Decimal" Precision="6" Scale="3" />
+          <Property Name="FinalForecast9L" Type="Double" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="WarningAllocation" Type="Boolean" />
+          <Property Name="FAmin" Type="Double" />
+          <Property Name="FAmax" Type="Double" />
+          <Property Name="MATFORmin" Type="Double" />
+          <Property Name="MATFORmax" Type="Double" />
+          <Property Name="timestamp" Type="DateTime" Precision="3" />
+          </EntityType>
+        <EntityType Name="Forecast_Product">
+          <Key>
+            <PropertyRef Name="GenerationDate" />
+            <PropertyRef Name="ProductCode" />
+            <PropertyRef Name="VintageYear" />
+            <PropertyRef Name="AvailableAllocation" />
+            <PropertyRef Name="ForecastAccomplishment" />
+            <PropertyRef Name="MATvsFinalForecast" />
+            <PropertyRef Name="Notes" />
+          </Key>
+          <Property Name="GenerationDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Brand" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProductCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="VintageYear" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Package" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COREorMTF" Type="Boolean" />
+          <Property Name="InHand" Type="Double" />
+          <Property Name="ShipHand" Type="Double" />
+          <Property Name="SalesLY" Type="Double" />
+          <Property Name="MAT" Type="Double" />
+          <Property Name="Target" Type="Double" />
+          <Property Name="Target9L" Type="Double" />
+          <Property Name="AutomaticForecast" Type="Double" />
+          <Property Name="AdjustedForecast" Type="Double" />
+          <Property Name="FinalForecast" Type="Double" />
+          <Property Name="AvailableAllocation" Type="Int32" Nullable="false" />
+          <Property Name="ForecastAccomplishment" Type="Double" Nullable="false" />
+          <Property Name="MATvsFinalForecast" Type="Double" Nullable="false" />
+          <Property Name="Notes" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ForecastJan" Type="Double" />
+          <Property Name="ForecastFeb" Type="Double" />
+          <Property Name="ForecastMar" Type="Double" />
+          <Property Name="ForecastApr" Type="Double" />
+          <Property Name="ForecastMay" Type="Double" />
+          <Property Name="ForecastJun" Type="Double" />
+          <Property Name="ForecastJul" Type="Double" />
+          <Property Name="ForecastAug" Type="Double" />
+          <Property Name="ForecastSep" Type="Double" />
+          <Property Name="ForecastOct" Type="Double" />
+          <Property Name="ForecastNov" Type="Double" />
+          <Property Name="ForecastDec" Type="Double" />
+          <Property Name="Warning" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="Customer_MDMMMA">
+          <Key>
+            <PropertyRef Name="CustomerCode" />
+            <PropertyRef Name="CustomerCodeMD" />
+            <PropertyRef Name="CustomerCodeMM" />
+            <PropertyRef Name="CustomerCodeMA" />
+          </Key>
+          <Property Name="CustomerCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCodeMD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCodeMM" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerCodeMA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerMarket" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Alertas_limites">
+          <Key>
+            <PropertyRef Name="Tipo_Alerta" />
+            <PropertyRef Name="month" />
+          </Key>
+          <Property Name="Tipo_Alerta" Type="String" Nullable="false" MaxLength="23" FixedLength="false" Unicode="false" />
+          <Property Name="month" Type="Int32" Nullable="false" />
+          <Property Name="min" Type="Decimal" Precision="2" Scale="1" />
+          <Property Name="max" Type="Decimal" Precision="2" Scale="1" />
+        </EntityType>
+        <EntityType Name="Alertas_ABC">
+          <Key>
+            <PropertyRef Name="Tipologia" />
+          </Key>
+          <Property Name="Tipologia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Alerta" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SymFITModelStoreContainer" CdmEntityContainer="SymFITEntities">
+          <EntitySetMapping Name="Forecast">
+            <EntityTypeMapping TypeName="SymFITModel.Forecast">
+              <MappingFragment StoreEntitySet="Forecast">
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="MATFORmax" ColumnName="MATFORmax" />
+                <ScalarProperty Name="MATFORmin" ColumnName="MATFORmin" />
+                <ScalarProperty Name="FAmax" ColumnName="FAmax" />
+                <ScalarProperty Name="FAmin" ColumnName="FAmin" />
+                <ScalarProperty Name="WarningAllocation" ColumnName="WarningAllocation" />
+                <ScalarProperty Name="WarningProductCustomer" ColumnName="WarningProductCustomer" />
+                <ScalarProperty Name="FinalForecast9L" ColumnName="FinalForecast9L" />
+                <ScalarProperty Name="PackageCapacity" ColumnName="PackageCapacity" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Target9L" ColumnName="Target9L" />
+                <ScalarProperty Name="WeightsDec" ColumnName="WeightsDec" />
+                <ScalarProperty Name="WeightsNov" ColumnName="WeightsNov" />
+                <ScalarProperty Name="WeightsOct" ColumnName="WeightsOct" />
+                <ScalarProperty Name="WeightsSep" ColumnName="WeightsSep" />
+                <ScalarProperty Name="WeightsAug" ColumnName="WeightsAug" />
+                <ScalarProperty Name="WeightsJul" ColumnName="WeightsJul" />
+                <ScalarProperty Name="WeightsJun" ColumnName="WeightsJun" />
+                <ScalarProperty Name="WeightsMay" ColumnName="WeightsMay" />
+                <ScalarProperty Name="WeightsApr" ColumnName="WeightsApr" />
+                <ScalarProperty Name="WeightsMar" ColumnName="WeightsMar" />
+                <ScalarProperty Name="WeightsFeb" ColumnName="WeightsFeb" />
+                <ScalarProperty Name="WeightsJan" ColumnName="WeightsJan" />
+                <ScalarProperty Name="ForecastDec" ColumnName="ForecastDec" />
+                <ScalarProperty Name="ForecastNov" ColumnName="ForecastNov" />
+                <ScalarProperty Name="ForecastOct" ColumnName="ForecastOct" />
+                <ScalarProperty Name="ForecastSep" ColumnName="ForecastSep" />
+                <ScalarProperty Name="ForecastAug" ColumnName="ForecastAug" />
+                <ScalarProperty Name="ForecastJul" ColumnName="ForecastJul" />
+                <ScalarProperty Name="ForecastJun" ColumnName="ForecastJun" />
+                <ScalarProperty Name="ForecastMay" ColumnName="ForecastMay" />
+                <ScalarProperty Name="ForecastApr" ColumnName="ForecastApr" />
+                <ScalarProperty Name="ForecastMar" ColumnName="ForecastMar" />
+                <ScalarProperty Name="ForecastFeb" ColumnName="ForecastFeb" />
+                <ScalarProperty Name="ForecastJan" ColumnName="ForecastJan" />
+                <ScalarProperty Name="AjustDec" ColumnName="AjustDec" />
+                <ScalarProperty Name="AjustNov" ColumnName="AjustNov" />
+                <ScalarProperty Name="AjustOct" ColumnName="AjustOct" />
+                <ScalarProperty Name="AjustSep" ColumnName="AjustSep" />
+                <ScalarProperty Name="AjustAug" ColumnName="AjustAug" />
+                <ScalarProperty Name="AjustJul" ColumnName="AjustJul" />
+                <ScalarProperty Name="AjustJun" ColumnName="AjustJun" />
+                <ScalarProperty Name="AjustMay" ColumnName="AjustMay" />
+                <ScalarProperty Name="AjustApr" ColumnName="AjustApr" />
+                <ScalarProperty Name="AjustMar" ColumnName="AjustMar" />
+                <ScalarProperty Name="AjustFeb" ColumnName="AjustFeb" />
+                <ScalarProperty Name="AjustJan" ColumnName="AjustJan" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="MATvsFinalForecast" ColumnName="MATvsFinalForecast" />
+                <ScalarProperty Name="ForecastAccomplishment" ColumnName="ForecastAccomplishment" />
+                <ScalarProperty Name="MOQ" ColumnName="MOQ" />
+                <ScalarProperty Name="AvailableAllocation" ColumnName="AvailableAllocation" />
+                <ScalarProperty Name="FinalForecast" ColumnName="FinalForecast" />
+                <ScalarProperty Name="A_" ColumnName="A?" />
+                <ScalarProperty Name="AdjustedForecast" ColumnName="AdjustedForecast" />
+                <ScalarProperty Name="AutomaticForecast" ColumnName="AutomaticForecast" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="MAT" ColumnName="MAT" />
+                <ScalarProperty Name="SalesLY" ColumnName="SalesLY" />
+                <ScalarProperty Name="ShipHand" ColumnName="ShipHand" />
+                <ScalarProperty Name="InHand" ColumnName="InHand" />
+                <ScalarProperty Name="COREorMTF" ColumnName="COREorMTF" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="PriceList" ColumnName="PriceList" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="VintageYear" ColumnName="VintageYear" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="ForecastCustomer" ColumnName="ForecastCustomer" />
+                <ScalarProperty Name="ForecastCustomerCode" ColumnName="ForecastCustomerCode" />
+                <ScalarProperty Name="InvoiceCustomer" ColumnName="InvoiceCustomer" />
+                <ScalarProperty Name="InvoiceCustomerCode" ColumnName="InvoiceCustomerCode" />
+                <ScalarProperty Name="CustomerType" ColumnName="CustomerType" />
+                <ScalarProperty Name="ForecastMarket" ColumnName="ForecastMarket" />
+                <ScalarProperty Name="GenerationDate" ColumnName="GenerationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Forecast_Product">
+            <EntityTypeMapping TypeName="SymFITModel.Forecast_Product">
+              <MappingFragment StoreEntitySet="Forecast_Product">
+                <ScalarProperty Name="Warning" ColumnName="Warning" />
+                <ScalarProperty Name="ForecastDec" ColumnName="ForecastDec" />
+                <ScalarProperty Name="ForecastNov" ColumnName="ForecastNov" />
+                <ScalarProperty Name="ForecastOct" ColumnName="ForecastOct" />
+                <ScalarProperty Name="ForecastSep" ColumnName="ForecastSep" />
+                <ScalarProperty Name="ForecastAug" ColumnName="ForecastAug" />
+                <ScalarProperty Name="ForecastJul" ColumnName="ForecastJul" />
+                <ScalarProperty Name="ForecastJun" ColumnName="ForecastJun" />
+                <ScalarProperty Name="ForecastMay" ColumnName="ForecastMay" />
+                <ScalarProperty Name="ForecastApr" ColumnName="ForecastApr" />
+                <ScalarProperty Name="ForecastMar" ColumnName="ForecastMar" />
+                <ScalarProperty Name="ForecastFeb" ColumnName="ForecastFeb" />
+                <ScalarProperty Name="ForecastJan" ColumnName="ForecastJan" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="MATvsFinalForecast" ColumnName="MATvsFinalForecast" />
+                <ScalarProperty Name="ForecastAccomplishment" ColumnName="ForecastAccomplishment" />
+                <ScalarProperty Name="AvailableAllocation" ColumnName="AvailableAllocation" />
+                <ScalarProperty Name="FinalForecast" ColumnName="FinalForecast" />
+                <ScalarProperty Name="AdjustedForecast" ColumnName="AdjustedForecast" />
+                <ScalarProperty Name="AutomaticForecast" ColumnName="AutomaticForecast" />
+                <ScalarProperty Name="Target9L" ColumnName="Target9L" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="MAT" ColumnName="MAT" />
+                <ScalarProperty Name="SalesLY" ColumnName="SalesLY" />
+                <ScalarProperty Name="ShipHand" ColumnName="ShipHand" />
+                <ScalarProperty Name="InHand" ColumnName="InHand" />
+                <ScalarProperty Name="COREorMTF" ColumnName="COREorMTF" />
+                <ScalarProperty Name="Package" ColumnName="Package" />
+                <ScalarProperty Name="VintageYear" ColumnName="VintageYear" />
+                <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+                <ScalarProperty Name="Brand" ColumnName="Brand" />
+                <ScalarProperty Name="GenerationDate" ColumnName="GenerationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Customer_MDMMMA">
+            <EntityTypeMapping TypeName="SymFITModel.Customer_MDMMMA">
+              <MappingFragment StoreEntitySet="Customer_MDMMMA">
+                <ScalarProperty Name="CustomerMarket" ColumnName="CustomerMarket" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="MA" ColumnName="MA" />
+                <ScalarProperty Name="CustomerCodeMA" ColumnName="CustomerCodeMA" />
+                <ScalarProperty Name="MM" ColumnName="MM" />
+                <ScalarProperty Name="CustomerCodeMM" ColumnName="CustomerCodeMM" />
+                <ScalarProperty Name="MD" ColumnName="MD" />
+                <ScalarProperty Name="CustomerCodeMD" ColumnName="CustomerCodeMD" />
+                <ScalarProperty Name="CustomerCode" ColumnName="CustomerCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alertas_limites">
+            <EntityTypeMapping TypeName="SymFITModel.Alertas_limites">
+              <MappingFragment StoreEntitySet="Alertas_limites">
+                <ScalarProperty Name="max" ColumnName="max" />
+                <ScalarProperty Name="min" ColumnName="min" />
+                <ScalarProperty Name="month" ColumnName="month" />
+                <ScalarProperty Name="Tipo_Alerta" ColumnName="Tipo_Alerta" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Alertas_ABC">
+            <EntityTypeMapping TypeName="SymFITModel.Alertas_ABC">
+              <MappingFragment StoreEntitySet="Alertas_ABC">
+                <ScalarProperty Name="Alerta" ColumnName="Alerta" />
+                <ScalarProperty Name="Tipologia" ColumnName="Tipologia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,242 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+PricingExcelSap
+</name>
+</assembly>
+<members>
+<member name="M:PricingExcel2007.Sheet3.#ctor(Microsoft.Office.Tools.Excel.Factory,System.IServiceProvider)">
+</member><member name="M:PricingExcel2007.Sheet3.Initialize">
+</member><member name="M:PricingExcel2007.Sheet3.FinishInitialization">
+</member><member name="M:PricingExcel2007.Sheet3.InitializeDataBindings">
+</member><member name="M:PricingExcel2007.Sheet3.InitializeCachedData">
+</member><member name="M:PricingExcel2007.Sheet3.InitializeData">
+</member><member name="M:PricingExcel2007.Sheet3.BindToData">
+</member><member name="M:PricingExcel2007.Sheet3.StartCaching(System.String)">
+</member><member name="M:PricingExcel2007.Sheet3.StopCaching(System.String)">
+</member><member name="M:PricingExcel2007.Sheet3.IsCached(System.String)">
+</member><member name="M:PricingExcel2007.Sheet3.BeginInitialization">
+</member><member name="M:PricingExcel2007.Sheet3.EndInitialization">
+</member><member name="M:PricingExcel2007.Sheet3.InitializeControls">
+</member><member name="M:PricingExcel2007.Sheet3.InitializeComponents">
+</member><member name="M:PricingExcel2007.Sheet3.NeedsFill(System.String)">
+</member><member name="T:PricingExcel2007.Sheet3">
+</member><member name="M:PricingExcel2007.ThisWorkbook.#ctor(Microsoft.Office.Tools.Excel.Factory,System.IServiceProvider)">
+</member><member name="M:PricingExcel2007.ThisWorkbook.Initialize">
+</member><member name="M:PricingExcel2007.ThisWorkbook.FinishInitialization">
+</member><member name="M:PricingExcel2007.ThisWorkbook.InitializeDataBindings">
+</member><member name="M:PricingExcel2007.ThisWorkbook.InitializeCachedData">
+</member><member name="M:PricingExcel2007.ThisWorkbook.InitializeData">
+</member><member name="M:PricingExcel2007.ThisWorkbook.BindToData">
+</member><member name="M:PricingExcel2007.ThisWorkbook.StartCaching(System.String)">
+</member><member name="M:PricingExcel2007.ThisWorkbook.StopCaching(System.String)">
+</member><member name="M:PricingExcel2007.ThisWorkbook.IsCached(System.String)">
+</member><member name="M:PricingExcel2007.ThisWorkbook.BeginInitialization">
+</member><member name="M:PricingExcel2007.ThisWorkbook.EndInitialization">
+</member><member name="M:PricingExcel2007.ThisWorkbook.InitializeControls">
+</member><member name="M:PricingExcel2007.ThisWorkbook.InitializeComponents">
+</member><member name="M:PricingExcel2007.ThisWorkbook.NeedsFill(System.String)">
+</member><member name="M:PricingExcel2007.ThisWorkbook.OnShutdown">
+</member><member name="T:PricingExcel2007.ThisWorkbook">
+</member><member name="M:PricingExcel2007.Globals.#ctor">
+</member><member name="T:PricingExcel2007.Globals">
+</member><member name="M:PricingExcel2007.ThisRibbonCollection.#ctor(Microsoft.Office.Tools.Ribbon.RibbonFactory)">
+</member><member name="T:PricingExcel2007.ThisRibbonCollection">
+</member><member name="P:PricingExcel2007.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:PricingExcel2007.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:PricingExcel2007.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapClientsDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriaisDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.Query1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriais1DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriaisQueryDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapContratosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapTipoListaPrecosDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SAPT685TDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapClientsRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriaisRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.Query1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriais1Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriaisQueryRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapContratosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapTipoListaPrecosRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SAPT685TRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapClientsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriaisRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.Query1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriais1RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapMateriaisQueryRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapContratosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SapTipoListaPrecosRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1.SAPT685TRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SapClientsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SapMateriaisTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.Query1TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SapMateriais1TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SapMateriaisQueryTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SapContratosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SapTipoListaPrecosTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.SAPT685TTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.UpdateUpdatedRows(PricingExcel2007.SapPricingDataset1,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.UpdateInsertedRows(PricingExcel2007.SapPricingDataset1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.UpdateDeletedRows(PricingExcel2007.SapPricingDataset1,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.UpdateAll(PricingExcel2007.SapPricingDataset1)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:PricingExcel2007.SapPricingDataset1TableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="M:PricingExcel2007.Sheet1.#ctor(Microsoft.Office.Tools.Excel.Factory,System.IServiceProvider)">
+</member><member name="M:PricingExcel2007.Sheet1.Initialize">
+</member><member name="M:PricingExcel2007.Sheet1.FinishInitialization">
+</member><member name="M:PricingExcel2007.Sheet1.InitializeDataBindings">
+</member><member name="M:PricingExcel2007.Sheet1.InitializeCachedData">
+</member><member name="M:PricingExcel2007.Sheet1.InitializeData">
+</member><member name="M:PricingExcel2007.Sheet1.BindToData">
+</member><member name="M:PricingExcel2007.Sheet1.StartCaching(System.String)">
+</member><member name="M:PricingExcel2007.Sheet1.StopCaching(System.String)">
+</member><member name="M:PricingExcel2007.Sheet1.IsCached(System.String)">
+</member><member name="M:PricingExcel2007.Sheet1.BeginInitialization">
+</member><member name="M:PricingExcel2007.Sheet1.EndInitialization">
+</member><member name="M:PricingExcel2007.Sheet1.InitializeControls">
+</member><member name="M:PricingExcel2007.Sheet1.InitializeComponents">
+</member><member name="M:PricingExcel2007.Sheet1.NeedsFill(System.String)">
+</member><member name="M:PricingExcel2007.Sheet1.OnShutdown">
+</member><member name="T:PricingExcel2007.Sheet1">
+</member>
+</members>
+</doc>

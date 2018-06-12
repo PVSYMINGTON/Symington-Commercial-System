@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d7644d009fc44afc817c6c1e6ac98f1f" Name="Diagram1" ZoomLevel="49">
+        <EntityTypeShape EntityType="SymFITModel.Forecast" Width="3" PointX="1" PointY="0.5" />
+        <EntityTypeShape EntityType="SymFITModel.Forecast_Product" Width="4.5" PointX="6.125" PointY="0.875" />
+        <EntityTypeShape EntityType="SymFITModel.Customer_MDMMMA" Width="1.5" PointX="7.25" PointY="9.5" />
+        <EntityTypeShape EntityType="SymFITModel.Alertas_limites" Width="1.5" PointX="12.5" PointY="6.25" />
+        <EntityTypeShape EntityType="SymFITModel.Alertas_ABC" Width="1.5" PointX="9.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

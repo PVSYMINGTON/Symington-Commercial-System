@@ -1,0 +1,829 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SalesSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SapClients">
+          <Key>
+            <PropertyRef Name="KUNNR" />
+          </Key>
+          <Property Name="KUNNR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NAME1" Type="nvarchar" MaxLength="50" />
+          <Property Name="LAND1" Type="nvarchar" MaxLength="50" />
+          <Property Name="LANDX50" Type="nvarchar" MaxLength="50" />
+          <Property Name="WAERS" Type="nvarchar" MaxLength="50" />
+          <Property Name="MARKETDIRECTOR" Type="nvarchar" MaxLength="50" />
+          <Property Name="MARKETMANAGER" Type="nvarchar" MaxLength="50" />
+          <Property Name="MARKETASSISTANT" Type="nvarchar" MaxLength="50" />
+          <Property Name="CLIENTSTAT" Type="nvarchar" MaxLength="50" />
+          <Property Name="KATR3" Type="nvarchar" MaxLength="50" />
+          <Property Name="KLIMK" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="DATADEALTERACAO" Type="nvarchar" MaxLength="50" />
+          <Property Name="KTOKD" Type="nvarchar" MaxLength="50" />
+          <Property Name="BRSCH" Type="nvarchar" MaxLength="50" />
+          <Property Name="CONTACTNAME" Type="nvarchar" MaxLength="50" />
+          <Property Name="CONTACTTELEPHONE" Type="nvarchar" MaxLength="50" />
+          <Property Name="CONTACTEMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZZDIASTOLER" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZTERMTEXT" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZINCOTERMS" Type="nvarchar" MaxLength="50" />
+          <Property Name="ADVERTENCIA" Type="nvarchar" MaxLength="50" />
+          <Property Name="KATR4" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SapForecast">
+          <Key>
+            <PropertyRef Name="CodCliFact" />
+            <PropertyRef Name="CodCliDest" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="TPRE" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="CodCliFact" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CodCliDest" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="TPRE" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Currency" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Period" Type="int" Nullable="false" />
+          <Property Name="Quarter1Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quarter2Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quarter3Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quarter4Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="AnualValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="UserCS" Type="varchar" MaxLength="50" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="FQ1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FQ2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FQ3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FQ4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Target" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="SapForecastStat">
+          <Key>
+            <PropertyRef Name="CodCliFact" />
+            <PropertyRef Name="CodCliStat" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="TPRE" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="CodCliFact" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CodCliStat" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="TPRE" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Currency" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Period" Type="int" Nullable="false" />
+          <Property Name="Quarter1Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quarter2Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quarter3Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Quarter4Value" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="AnualValue" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="UserCS" Type="varchar" MaxLength="50" />
+          <Property Name="timestamp" Type="datetime" />
+          <Property Name="FQ1" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FQ2" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FQ3" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="FQ4" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Target" Type="decimal" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="SapMateriais">
+          <Key>
+            <PropertyRef Name="MATNR" />
+          </Key>
+          <Property Name="MATNR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MAKTX" Type="nvarchar" MaxLength="50" />
+          <Property Name="WGBEZ60" Type="nvarchar" MaxLength="50" />
+          <Property Name="EWBEZ" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIV1ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIV1" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIV2ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIV2" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIV3ID" Type="nvarchar" MaxLength="50" />
+          <Property Name="NIV3" Type="nvarchar" MaxLength="50" />
+          <Property Name="CATEGORIAID" Type="nvarchar" MaxLength="50" />
+          <Property Name="CATEGORIA" Type="nvarchar" MaxLength="50" />
+          <Property Name="SUBCATEGORIAID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SUBCATEGORIA" Type="nvarchar" MaxLength="50" />
+          <Property Name="VINTAGEYEAR" Type="nvarchar" MaxLength="50" />
+          <Property Name="EMBALAGEM" Type="nvarchar" MaxLength="50" />
+          <Property Name="CHANGENR" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATADEALTERACAO" Type="nvarchar" MaxLength="50" />
+          <Property Name="MEINS" Type="nvarchar" MaxLength="50" />
+          <Property Name="RANGE" Type="nvarchar" MaxLength="50" />
+          <Property Name="PMATN" Type="nvarchar" MaxLength="50" />
+          <Property Name="TIPO" Type="nvarchar" MaxLength="101" StoreGeneratedPattern="Computed" />
+          <Property Name="FAMILIA" Type="nvarchar" MaxLength="50" StoreGeneratedPattern="Computed" />
+          <Property Name="ZZORDLSTPRECO" Type="nvarchar" MaxLength="50" />
+          <Property Name="ZZGROUP" Type="nvarchar" MaxLength="50" />
+          <Property Name="GRUPO" Type="nvarchar" MaxLength="50" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="1" />
+          <Property Name="PPMDD" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SapSalesImmaterialforForecastEdit">
+          <Key>
+            <PropertyRef Name="InvClientID" />
+            <PropertyRef Name="FinalClientID" />
+            <PropertyRef Name="Immaterial Number" />
+            <PropertyRef Name="Price List" />
+            <PropertyRef Name="Currency" />
+          </Key>
+          <Property Name="InvClientID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="FinalClientID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Immaterial Number" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="Price List" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="InHand9L" Type="numeric" Precision="28" Scale="2" />
+          <Property Name="Shipped9L" Type="numeric" Precision="28" Scale="2" />
+          <Property Name="InHand" Type="numeric" Precision="28" Scale="2" />
+        </EntityType>
+        <EntityType Name="SapSalesImmaterialforForecastEditStat">
+          <Key>
+            <PropertyRef Name="InvClientID" />
+            <PropertyRef Name="StatClientID" />
+            <PropertyRef Name="Immaterial Number" />
+            <PropertyRef Name="Price List" />
+            <PropertyRef Name="Currency" />
+          </Key>
+          <Property Name="InvClientID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="StatClientID" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Immaterial Number" Type="nvarchar" MaxLength="18" Nullable="false" />
+          <Property Name="Price List" Type="nvarchar" MaxLength="2" Nullable="false" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="5" Nullable="false" />
+          <Property Name="InHand9L" Type="numeric" Precision="28" Scale="2" />
+          <Property Name="Shipped9L" Type="numeric" Precision="28" Scale="2" />
+          <Property Name="InHand" Type="numeric" Precision="28" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesSystem.dbo.queryForecastCliStatwithExceptions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="queryForecastCliStatwithExceptions">
+          <Key>
+            <PropertyRef Name="CodCliFact" />
+            <PropertyRef Name="CodCliDest" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="TPRE" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Name="CodCliFact" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="CodCliDest" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Codigo" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="TPRE" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Currency" Type="varchar" MaxLength="3" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="Period" Type="int" Nullable="false" />
+          <Property Name="CliStatOrig" Type="nvarchar" MaxLength="50" />
+          <Property Name="EXTWG" Type="nvarchar" MaxLength="18" />
+          <Property Name="CliStatExcep" Type="nvarchar" MaxLength="10" />
+          <Property Name="Clistat" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesSystem.dbo.SapClientsMDMMMA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SapClientsMDMMMA">
+          <Key>
+            <PropertyRef Name="KUNNR" />
+            <PropertyRef Name="KUNNRMD" />
+            <PropertyRef Name="KUNNRMM" />
+            <PropertyRef Name="KUNNRMA" />
+          </Key>
+          <Property Name="KUNNR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="KUNNRMD" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MD" Type="nvarchar" MaxLength="50" />
+          <Property Name="KUNNRMM" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MM" Type="nvarchar" MaxLength="50" />
+          <Property Name="KUNNRMA" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MA" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesSystem.dbo.SapImmaterialSales' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SapImmaterialSales">
+          <Key>
+            <PropertyRef Name="Material Number" />
+            <PropertyRef Name="Price List" />
+          </Key>
+          <Property Name="Year" Type="varchar" MaxLength="4" />
+          <Property Name="InvClientID" Type="varchar" MaxLength="50" />
+          <Property Name="FinalClientID" Type="varchar" MaxLength="50" />
+          <Property Name="StatsClientId" Type="varchar" MaxLength="50" />
+          <Property Name="Material Number" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MAKTX" Type="nvarchar" MaxLength="50" />
+          <Property Name="Immaterial Number" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price List" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Currency" Type="varchar" MaxLength="50" />
+          <Property Name="ShipHand" Type="numeric" Precision="38" Scale="7" />
+          <Property Name="ShipHandUnit" Type="numeric" Precision="38" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesSystem.dbo.SapMateriaisEmbalagem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SapMateriaisEmbalagem">
+          <Key>
+            <PropertyRef Name="MATNR" />
+          </Key>
+          <Property Name="MATNR" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DESCR" Type="nvarchar" MaxLength="50" />
+          <Property Name="LTS" Type="decimal" Precision="6" Scale="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SalesSystem.dbo.SapPricingAnalisysforForecast' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SapPricingAnalisysforForecast">
+          <Key>
+            <PropertyRef Name="CHAVE" />
+          </Key>
+          <Property Name="CHAVE" Type="bigint" Nullable="false" />
+          <Property Name="DESCRICAO_TABELA" Type="nvarchar" MaxLength="60" />
+          <Property Name="INV_CUSTOMER" Type="nvarchar" MaxLength="10" />
+          <Property Name="FINAL_CUSTOMER" Type="nvarchar" MaxLength="10" />
+          <Property Name="STATS_CUSTOMER" Type="nvarchar" MaxLength="10" />
+          <Property Name="PRICE_LIST_TYPE" Type="nvarchar" MaxLength="128" />
+          <Property Name="CURRENCY" Type="nvarchar" MaxLength="5" />
+          <Property Name="O_REF_CODE" Type="nvarchar" MaxLength="18" />
+          <Property Name="VALID_FROM" Type="nvarchar" MaxLength="8" />
+          <Property Name="VALID_TO" Type="nvarchar" MaxLength="8" />
+          <Property Name="NSP_EUR_9L" Type="decimal" Precision="28" Scale="2" />
+          <Property Name="NNSP_CURR_EUR_9L" Type="decimal" Precision="28" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="SalesSystemModelStoreContainer">
+          <EntitySet Name="SapClients" EntityType="Self.SapClients" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SapForecast" EntityType="Self.SapForecast" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SapForecastStat" EntityType="Self.SapForecastStat" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SapMateriais" EntityType="Self.SapMateriais" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SapSalesImmaterialforForecastEdit" EntityType="Self.SapSalesImmaterialforForecastEdit" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="SapSalesImmaterialforForecastEditStat" EntityType="Self.SapSalesImmaterialforForecastEditStat" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="queryForecastCliStatwithExceptions" EntityType="Self.queryForecastCliStatwithExceptions" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[queryForecastCliStatwithExceptions].[CodCliFact] AS [CodCliFact], 
+[queryForecastCliStatwithExceptions].[CodCliDest] AS [CodCliDest], 
+[queryForecastCliStatwithExceptions].[Codigo] AS [Codigo], 
+[queryForecastCliStatwithExceptions].[TPRE] AS [TPRE], 
+[queryForecastCliStatwithExceptions].[Currency] AS [Currency], 
+[queryForecastCliStatwithExceptions].[Year] AS [Year], 
+[queryForecastCliStatwithExceptions].[Period] AS [Period], 
+[queryForecastCliStatwithExceptions].[CliStatOrig] AS [CliStatOrig], 
+[queryForecastCliStatwithExceptions].[EXTWG] AS [EXTWG], 
+[queryForecastCliStatwithExceptions].[CliStatExcep] AS [CliStatExcep], 
+[queryForecastCliStatwithExceptions].[Clistat] AS [Clistat]
+FROM [dbo].[queryForecastCliStatwithExceptions] AS [queryForecastCliStatwithExceptions]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SapClientsMDMMMA" EntityType="Self.SapClientsMDMMMA" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[SapClientsMDMMMA].[KUNNR] AS [KUNNR], 
+[SapClientsMDMMMA].[KUNNRMD] AS [KUNNRMD], 
+[SapClientsMDMMMA].[MD] AS [MD], 
+[SapClientsMDMMMA].[KUNNRMM] AS [KUNNRMM], 
+[SapClientsMDMMMA].[MM] AS [MM], 
+[SapClientsMDMMMA].[KUNNRMA] AS [KUNNRMA], 
+[SapClientsMDMMMA].[MA] AS [MA]
+FROM [dbo].[SapClientsMDMMMA] AS [SapClientsMDMMMA]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SapImmaterialSales" EntityType="Self.SapImmaterialSales" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[SapImmaterialSales].[Year] AS [Year], 
+[SapImmaterialSales].[InvClientID] AS [InvClientID], 
+[SapImmaterialSales].[FinalClientID] AS [FinalClientID], 
+[SapImmaterialSales].[StatsClientId] AS [StatsClientId], 
+[SapImmaterialSales].[Material Number] AS [Material Number], 
+[SapImmaterialSales].[MAKTX] AS [MAKTX], 
+[SapImmaterialSales].[Immaterial Number] AS [Immaterial Number], 
+[SapImmaterialSales].[Price List] AS [Price List], 
+[SapImmaterialSales].[Currency] AS [Currency], 
+[SapImmaterialSales].[ShipHand] AS [ShipHand], 
+[SapImmaterialSales].[ShipHandUnit] AS [ShipHandUnit]
+FROM [dbo].[SapImmaterialSales] AS [SapImmaterialSales]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SapMateriaisEmbalagem" EntityType="Self.SapMateriaisEmbalagem" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[SapMateriaisEmbalagem].[MATNR] AS [MATNR], 
+[SapMateriaisEmbalagem].[DESCR] AS [DESCR], 
+[SapMateriaisEmbalagem].[LTS] AS [LTS]
+FROM [dbo].[SapMateriaisEmbalagem] AS [SapMateriaisEmbalagem]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SapPricingAnalisysforForecast" EntityType="Self.SapPricingAnalisysforForecast" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+[SapPricingAnalisysforForecast].[CHAVE] AS [CHAVE], 
+[SapPricingAnalisysforForecast].[DESCRICAO_TABELA] AS [DESCRICAO_TABELA], 
+[SapPricingAnalisysforForecast].[INV_CUSTOMER] AS [INV_CUSTOMER], 
+[SapPricingAnalisysforForecast].[FINAL_CUSTOMER] AS [FINAL_CUSTOMER], 
+[SapPricingAnalisysforForecast].[STATS_CUSTOMER] AS [STATS_CUSTOMER], 
+[SapPricingAnalisysforForecast].[PRICE_LIST_TYPE] AS [PRICE_LIST_TYPE], 
+[SapPricingAnalisysforForecast].[CURRENCY] AS [CURRENCY], 
+[SapPricingAnalisysforForecast].[O_REF_CODE] AS [O_REF_CODE], 
+[SapPricingAnalisysforForecast].[VALID_FROM] AS [VALID_FROM], 
+[SapPricingAnalisysforForecast].[VALID_TO] AS [VALID_TO], 
+[SapPricingAnalisysforForecast].[NSP_EUR_9L] AS [NSP_EUR_9L], 
+[SapPricingAnalisysforForecast].[NNSP_CURR_EUR_9L] AS [NNSP_CURR_EUR_9L]
+FROM [dbo].[SapPricingAnalisysforForecast] AS [SapPricingAnalisysforForecast]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ForecastModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2009/11/edm" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="SalesSystemEntities" annotation:LazyLoadingEnabled="true" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+          <EntitySet Name="SapClients" EntityType="ForecastModel.SapClients" />
+          <EntitySet Name="SapMateriais" EntityType="ForecastModel.SapMateriais" />
+          <EntitySet Name="SapClientsMDMMMA" EntityType="ForecastModel.SapClientsMDMMMA" />
+          <EntitySet Name="SapMateriaisEmbalagem" EntityType="ForecastModel.SapMateriaisEmbalagem" />
+          <EntitySet Name="SapImmaterialSales" EntityType="ForecastModel.SapImmaterialSales" />
+          <EntitySet Name="queryForecastCliStatwithExceptions" EntityType="ForecastModel.queryForecastCliStatwithExceptions" />
+          <EntitySet Name="SapSalesImmaterialforForecastEdit" EntityType="ForecastModel.SapSalesImmaterialforForecastEdit" />
+          <EntitySet Name="SapForecast" EntityType="ForecastModel.SapForecast" />
+          <EntitySet Name="SapForecastStat" EntityType="ForecastModel.SapForecastStat" />
+          <EntitySet Name="SapSalesImmaterialforForecastEditStat" EntityType="ForecastModel.SapSalesImmaterialforForecastEditStat" />
+          <EntitySet Name="SapPricingAnalisysforForecast" EntityType="ForecastModel.SapPricingAnalisysforForecast" />
+        </EntityContainer>
+        <EntityType Name="SapClients">
+          <Key>
+            <PropertyRef Name="KUNNR" />
+          </Key>
+          <Property Name="KUNNR" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NAME1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LAND1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LANDX50" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="WAERS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MARKETDIRECTOR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MARKETMANAGER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MARKETASSISTANT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CLIENTSTAT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KATR3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KLIMK" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="DATADEALTERACAO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KTOKD" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="BRSCH" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CONTACTNAME" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CONTACTTELEPHONE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CONTACTEMAIL" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ZZDIASTOLER" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ZTERMTEXT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ZINCOTERMS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ADVERTENCIA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="KATR4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SapMateriais">
+          <Key>
+            <PropertyRef Name="MATNR" />
+          </Key>
+          <Property Name="MATNR" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MAKTX" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="WGBEZ60" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EWBEZ" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NIV1ID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NIV1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NIV2ID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NIV2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NIV3ID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="NIV3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CATEGORIAID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CATEGORIA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SUBCATEGORIAID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SUBCATEGORIA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="VINTAGEYEAR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="EMBALAGEM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CHANGENR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DATADEALTERACAO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MEINS" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RANGE" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PMATN" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TIPO" Type="String" MaxLength="101" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FAMILIA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" annotation:StoreGeneratedPattern="Computed" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ZZORDLSTPRECO" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="ZZGROUP" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GRUPO" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATUS" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="PPMDD" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SapClientsMDMMMA">
+          <Key>
+            <PropertyRef Name="KUNNR" />
+            <PropertyRef Name="KUNNRMD" />
+            <PropertyRef Name="KUNNRMM" />
+            <PropertyRef Name="KUNNRMA" />
+          </Key>
+          <Property Name="KUNNR" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MD" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MM" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MA" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="KUNNRMD" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KUNNRMM" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KUNNRMA" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SapMateriaisEmbalagem">
+          <Key>
+            <PropertyRef Name="MATNR" />
+          </Key>
+          <Property Name="MATNR" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DESCR" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Type="Decimal" Name="LTS" Precision="6" Scale="3" />
+        </EntityType>
+        <EntityType Name="SapImmaterialSales">
+          <Key>
+            <PropertyRef Name="Material_Number" />
+            <PropertyRef Name="Price_List" />
+          </Key>
+          <Property Type="String" Name="Year" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InvClientID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FinalClientID" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="StatsClientId" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Material_Number" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MAKTX" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Immaterial_Number" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Price_List" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Decimal" Name="ShipHand" Precision="38" Scale="7" />
+          <Property Type="Decimal" Name="ShipHandUnit" Precision="38" Scale="2" />
+        </EntityType>
+        <EntityType Name="queryForecastCliStatwithExceptions">
+          <Key>
+            <PropertyRef Name="CodCliFact" />
+            <PropertyRef Name="CodCliDest" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="TPRE" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Type="String" Name="CodCliFact" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodCliDest" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TPRE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Year" Nullable="false" />
+          <Property Type="Int32" Name="Period" Nullable="false" />
+          <Property Type="String" Name="CliStatOrig" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EXTWG" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CliStatExcep" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Clistat" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SapSalesImmaterialforForecastEdit">
+          <Key>
+            <PropertyRef Name="InvClientID" />
+            <PropertyRef Name="FinalClientID" />
+            <PropertyRef Name="Immaterial_Number" />
+            <PropertyRef Name="Price_List" />
+            <PropertyRef Name="Currency" />
+          </Key>
+          <Property Type="String" Name="InvClientID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FinalClientID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Immaterial_Number" Nullable="false" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Price_List" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Currency" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="InHand9L" Precision="28" Scale="2" />
+          <Property Type="Decimal" Name="Shipped9L" Precision="28" Scale="2" />
+          <Property Type="Decimal" Name="InHand" Precision="28" Scale="2" />
+        </EntityType>
+        <EntityType Name="SapForecast">
+          <Key>
+            <PropertyRef Name="CodCliFact" />
+            <PropertyRef Name="CodCliDest" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="TPRE" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Period" />
+          </Key>
+          <Property Type="String" Name="CodCliFact" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CodCliDest" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TPRE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Year" Nullable="false" />
+          <Property Type="Int32" Name="Period" Nullable="false" />
+          <Property Type="Decimal" Name="Quarter1Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quarter2Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quarter3Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quarter4Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="AnualValue" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="UserCS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="timestamp" Precision="3" />
+          <Property Type="Decimal" Name="FQ1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FQ2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FQ3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FQ4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Target" Precision="18" Scale="2" />
+        </EntityType>
+        <EntityType Name="SapForecastStat">
+          <Key>
+            <PropertyRef Name="CodCliStat" />
+            <PropertyRef Name="Codigo" />
+            <PropertyRef Name="TPRE" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="Year" />
+            <PropertyRef Name="Period" />
+            <PropertyRef Name="CodCliFact" />
+          </Key>
+          <Property Type="String" Name="CodCliStat" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Codigo" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TPRE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Currency" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Year" Nullable="false" />
+          <Property Type="Int32" Name="Period" Nullable="false" />
+          <Property Type="Decimal" Name="Quarter1Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quarter2Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quarter3Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Quarter4Value" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="AnualValue" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="String" Name="UserCS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="timestamp" Precision="3" />
+          <Property Type="Decimal" Name="FQ1" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FQ2" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FQ3" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="FQ4" Precision="18" Scale="2" />
+          <Property Type="Decimal" Name="Target" Precision="18" Scale="2" />
+          <Property Name="CodCliFact" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SapSalesImmaterialforForecastEditStat">
+          <Key>
+            <PropertyRef Name="StatClientID" />
+            <PropertyRef Name="Immaterial_Number" />
+            <PropertyRef Name="Price_List" />
+            <PropertyRef Name="Currency" />
+            <PropertyRef Name="InvClientID" />
+          </Key>
+          <Property Type="String" Name="StatClientID" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Immaterial_Number" Nullable="false" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Price_List" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Currency" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="InHand9L" Precision="28" Scale="2" />
+          <Property Type="Decimal" Name="Shipped9L" Precision="28" Scale="2" />
+          <Property Type="Decimal" Name="InHand" Precision="28" Scale="2" />
+          <Property Name="InvClientID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SapPricingAnalisysforForecast">
+          <Key>
+            <PropertyRef Name="CHAVE" />
+          </Key>
+          <Property Name="CHAVE" Type="Int64" Nullable="false" />
+          <Property Name="DESCRICAO_TABELA" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="INV_CUSTOMER" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FINAL_CUSTOMER" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="STATS_CUSTOMER" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PRICE_LIST_TYPE" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="CURRENCY" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Name="O_REF_CODE" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+          <Property Name="VALID_FROM" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="VALID_TO" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="NSP_EUR_9L" Type="Decimal" Precision="28" Scale="2" />
+          <Property Name="NNSP_CURR_EUR_9L" Type="Decimal" Precision="28" Scale="2" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SalesSystemModelStoreContainer" CdmEntityContainer="SalesSystemEntities">
+          <EntitySetMapping Name="SapClients">
+            <EntityTypeMapping TypeName="ForecastModel.SapClients">
+              <MappingFragment StoreEntitySet="SapClients">
+                <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+                <ScalarProperty Name="NAME1" ColumnName="NAME1" />
+                <ScalarProperty Name="LAND1" ColumnName="LAND1" />
+                <ScalarProperty Name="LANDX50" ColumnName="LANDX50" />
+                <ScalarProperty Name="WAERS" ColumnName="WAERS" />
+                <ScalarProperty Name="MARKETDIRECTOR" ColumnName="MARKETDIRECTOR" />
+                <ScalarProperty Name="MARKETMANAGER" ColumnName="MARKETMANAGER" />
+                <ScalarProperty Name="MARKETASSISTANT" ColumnName="MARKETASSISTANT" />
+                <ScalarProperty Name="CLIENTSTAT" ColumnName="CLIENTSTAT" />
+                <ScalarProperty Name="KATR3" ColumnName="KATR3" />
+                <ScalarProperty Name="KLIMK" ColumnName="KLIMK" />
+                <ScalarProperty Name="DATADEALTERACAO" ColumnName="DATADEALTERACAO" />
+                <ScalarProperty Name="KTOKD" ColumnName="KTOKD" />
+                <ScalarProperty Name="BRSCH" ColumnName="BRSCH" />
+                <ScalarProperty Name="CONTACTNAME" ColumnName="CONTACTNAME" />
+                <ScalarProperty Name="CONTACTTELEPHONE" ColumnName="CONTACTTELEPHONE" />
+                <ScalarProperty Name="CONTACTEMAIL" ColumnName="CONTACTEMAIL" />
+                <ScalarProperty Name="ZZDIASTOLER" ColumnName="ZZDIASTOLER" />
+                <ScalarProperty Name="ZTERMTEXT" ColumnName="ZTERMTEXT" />
+                <ScalarProperty Name="ZINCOTERMS" ColumnName="ZINCOTERMS" />
+                <ScalarProperty Name="ADVERTENCIA" ColumnName="ADVERTENCIA" />
+                <ScalarProperty Name="KATR4" ColumnName="KATR4" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapMateriais">
+            <EntityTypeMapping TypeName="ForecastModel.SapMateriais">
+              <MappingFragment StoreEntitySet="SapMateriais">
+                <ScalarProperty Name="PPMDD" ColumnName="PPMDD" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="GRUPO" ColumnName="GRUPO" />
+                <ScalarProperty Name="ZZGROUP" ColumnName="ZZGROUP" />
+                <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+                <ScalarProperty Name="MAKTX" ColumnName="MAKTX" />
+                <ScalarProperty Name="WGBEZ60" ColumnName="WGBEZ60" />
+                <ScalarProperty Name="EWBEZ" ColumnName="EWBEZ" />
+                <ScalarProperty Name="NIV1ID" ColumnName="NIV1ID" />
+                <ScalarProperty Name="NIV1" ColumnName="NIV1" />
+                <ScalarProperty Name="NIV2ID" ColumnName="NIV2ID" />
+                <ScalarProperty Name="NIV2" ColumnName="NIV2" />
+                <ScalarProperty Name="NIV3ID" ColumnName="NIV3ID" />
+                <ScalarProperty Name="NIV3" ColumnName="NIV3" />
+                <ScalarProperty Name="CATEGORIAID" ColumnName="CATEGORIAID" />
+                <ScalarProperty Name="CATEGORIA" ColumnName="CATEGORIA" />
+                <ScalarProperty Name="SUBCATEGORIAID" ColumnName="SUBCATEGORIAID" />
+                <ScalarProperty Name="SUBCATEGORIA" ColumnName="SUBCATEGORIA" />
+                <ScalarProperty Name="VINTAGEYEAR" ColumnName="VINTAGEYEAR" />
+                <ScalarProperty Name="EMBALAGEM" ColumnName="EMBALAGEM" />
+                <ScalarProperty Name="CHANGENR" ColumnName="CHANGENR" />
+                <ScalarProperty Name="DATADEALTERACAO" ColumnName="DATADEALTERACAO" />
+                <ScalarProperty Name="MEINS" ColumnName="MEINS" />
+                <ScalarProperty Name="RANGE" ColumnName="RANGE" />
+                <ScalarProperty Name="PMATN" ColumnName="PMATN" />
+                <ScalarProperty Name="TIPO" ColumnName="TIPO" />
+                <ScalarProperty Name="FAMILIA" ColumnName="FAMILIA" />
+                <ScalarProperty Name="ZZORDLSTPRECO" ColumnName="ZZORDLSTPRECO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapClientsMDMMMA">
+            <EntityTypeMapping TypeName="ForecastModel.SapClientsMDMMMA">
+              <MappingFragment StoreEntitySet="SapClientsMDMMMA">
+                <ScalarProperty Name="KUNNRMA" ColumnName="KUNNRMA" />
+                <ScalarProperty Name="KUNNRMM" ColumnName="KUNNRMM" />
+                <ScalarProperty Name="KUNNRMD" ColumnName="KUNNRMD" />
+                <ScalarProperty Name="KUNNR" ColumnName="KUNNR" />
+                <ScalarProperty Name="MD" ColumnName="MD" />
+                <ScalarProperty Name="MM" ColumnName="MM" />
+                <ScalarProperty Name="MA" ColumnName="MA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapMateriaisEmbalagem">
+            <EntityTypeMapping TypeName="ForecastModel.SapMateriaisEmbalagem">
+              <MappingFragment StoreEntitySet="SapMateriaisEmbalagem">
+                <ScalarProperty Name="LTS" ColumnName="LTS" />
+                <ScalarProperty Name="MATNR" ColumnName="MATNR" />
+                <ScalarProperty Name="DESCR" ColumnName="DESCR" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapImmaterialSales">
+            <EntityTypeMapping TypeName="ForecastModel.SapImmaterialSales">
+              <MappingFragment StoreEntitySet="SapImmaterialSales">
+                <ScalarProperty Name="ShipHandUnit" ColumnName="ShipHandUnit" />
+                <ScalarProperty Name="ShipHand" ColumnName="ShipHand" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Price_List" ColumnName="Price List" />
+                <ScalarProperty Name="Immaterial_Number" ColumnName="Immaterial Number" />
+                <ScalarProperty Name="MAKTX" ColumnName="MAKTX" />
+                <ScalarProperty Name="Material_Number" ColumnName="Material Number" />
+                <ScalarProperty Name="StatsClientId" ColumnName="StatsClientId" />
+                <ScalarProperty Name="FinalClientID" ColumnName="FinalClientID" />
+                <ScalarProperty Name="InvClientID" ColumnName="InvClientID" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="queryForecastCliStatwithExceptions">
+            <EntityTypeMapping TypeName="ForecastModel.queryForecastCliStatwithExceptions">
+              <MappingFragment StoreEntitySet="queryForecastCliStatwithExceptions">
+                <ScalarProperty Name="Clistat" ColumnName="Clistat" />
+                <ScalarProperty Name="CliStatExcep" ColumnName="CliStatExcep" />
+                <ScalarProperty Name="EXTWG" ColumnName="EXTWG" />
+                <ScalarProperty Name="CliStatOrig" ColumnName="CliStatOrig" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="TPRE" ColumnName="TPRE" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="CodCliDest" ColumnName="CodCliDest" />
+                <ScalarProperty Name="CodCliFact" ColumnName="CodCliFact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapSalesImmaterialforForecastEdit">
+            <EntityTypeMapping TypeName="ForecastModel.SapSalesImmaterialforForecastEdit">
+              <MappingFragment StoreEntitySet="SapSalesImmaterialforForecastEdit">
+                <ScalarProperty Name="InHand" ColumnName="InHand" />
+                <ScalarProperty Name="Shipped9L" ColumnName="Shipped9L" />
+                <ScalarProperty Name="InHand9L" ColumnName="InHand9L" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Price_List" ColumnName="Price List" />
+                <ScalarProperty Name="Immaterial_Number" ColumnName="Immaterial Number" />
+                <ScalarProperty Name="FinalClientID" ColumnName="FinalClientID" />
+                <ScalarProperty Name="InvClientID" ColumnName="InvClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapForecast">
+            <EntityTypeMapping TypeName="ForecastModel.SapForecast">
+              <MappingFragment StoreEntitySet="SapForecast">
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="FQ4" ColumnName="FQ4" />
+                <ScalarProperty Name="FQ3" ColumnName="FQ3" />
+                <ScalarProperty Name="FQ2" ColumnName="FQ2" />
+                <ScalarProperty Name="FQ1" ColumnName="FQ1" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="UserCS" ColumnName="UserCS" />
+                <ScalarProperty Name="AnualValue" ColumnName="AnualValue" />
+                <ScalarProperty Name="Quarter4Value" ColumnName="Quarter4Value" />
+                <ScalarProperty Name="Quarter3Value" ColumnName="Quarter3Value" />
+                <ScalarProperty Name="Quarter2Value" ColumnName="Quarter2Value" />
+                <ScalarProperty Name="Quarter1Value" ColumnName="Quarter1Value" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="TPRE" ColumnName="TPRE" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="CodCliDest" ColumnName="CodCliDest" />
+                <ScalarProperty Name="CodCliFact" ColumnName="CodCliFact" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapForecastStat">
+            <EntityTypeMapping TypeName="ForecastModel.SapForecastStat">
+              <MappingFragment StoreEntitySet="SapForecastStat">
+                <ScalarProperty Name="CodCliFact" ColumnName="CodCliFact" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="FQ4" ColumnName="FQ4" />
+                <ScalarProperty Name="FQ3" ColumnName="FQ3" />
+                <ScalarProperty Name="FQ2" ColumnName="FQ2" />
+                <ScalarProperty Name="FQ1" ColumnName="FQ1" />
+                <ScalarProperty Name="timestamp" ColumnName="timestamp" />
+                <ScalarProperty Name="UserCS" ColumnName="UserCS" />
+                <ScalarProperty Name="AnualValue" ColumnName="AnualValue" />
+                <ScalarProperty Name="Quarter4Value" ColumnName="Quarter4Value" />
+                <ScalarProperty Name="Quarter3Value" ColumnName="Quarter3Value" />
+                <ScalarProperty Name="Quarter2Value" ColumnName="Quarter2Value" />
+                <ScalarProperty Name="Quarter1Value" ColumnName="Quarter1Value" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="TPRE" ColumnName="TPRE" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="CodCliStat" ColumnName="CodCliStat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapSalesImmaterialforForecastEditStat">
+            <EntityTypeMapping TypeName="ForecastModel.SapSalesImmaterialforForecastEditStat">
+              <MappingFragment StoreEntitySet="SapSalesImmaterialforForecastEditStat">
+                <ScalarProperty Name="InvClientID" ColumnName="InvClientID" />
+                <ScalarProperty Name="InHand" ColumnName="InHand" />
+                <ScalarProperty Name="Shipped9L" ColumnName="Shipped9L" />
+                <ScalarProperty Name="InHand9L" ColumnName="InHand9L" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="Price_List" ColumnName="Price List" />
+                <ScalarProperty Name="Immaterial_Number" ColumnName="Immaterial Number" />
+                <ScalarProperty Name="StatClientID" ColumnName="StatClientID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SapPricingAnalisysforForecast">
+            <EntityTypeMapping TypeName="ForecastModel.SapPricingAnalisysforForecast">
+              <MappingFragment StoreEntitySet="SapPricingAnalisysforForecast">
+                <ScalarProperty Name="NNSP_CURR_EUR_9L" ColumnName="NNSP_CURR_EUR_9L" />
+                <ScalarProperty Name="NSP_EUR_9L" ColumnName="NSP_EUR_9L" />
+                <ScalarProperty Name="VALID_TO" ColumnName="VALID_TO" />
+                <ScalarProperty Name="VALID_FROM" ColumnName="VALID_FROM" />
+                <ScalarProperty Name="O_REF_CODE" ColumnName="O_REF_CODE" />
+                <ScalarProperty Name="CURRENCY" ColumnName="CURRENCY" />
+                <ScalarProperty Name="PRICE_LIST_TYPE" ColumnName="PRICE_LIST_TYPE" />
+                <ScalarProperty Name="STATS_CUSTOMER" ColumnName="STATS_CUSTOMER" />
+                <ScalarProperty Name="FINAL_CUSTOMER" ColumnName="FINAL_CUSTOMER" />
+                <ScalarProperty Name="INV_CUSTOMER" ColumnName="INV_CUSTOMER" />
+                <ScalarProperty Name="DESCRICAO_TABELA" ColumnName="DESCRICAO_TABELA" />
+                <ScalarProperty Name="CHAVE" ColumnName="CHAVE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer>
+    <edmx:Connection>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <edmx:DesignerInfoPropertySet>
+        <edmx:DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <edmx:DesignerProperty Name="EnablePluralization" Value="False" />
+        <edmx:DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <edmx:DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </edmx:DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <edmx:Diagram Name="Forecast" ZoomLevel="100">
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapClients" Width="1.5" PointX="0.5" PointY="0.5" Height="5.2494108072916656" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapMateriais" Width="1.5" PointX="5.875" PointY="0.625" Height="6.21091796875" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapClientsMDMMMA" Width="1.875" PointX="7.5" PointY="0.625" Height="2.3648893229166665" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapMateriaisEmbalagem" Width="2" PointX="9.75" PointY="0.5" Height="1.59568359375" IsExpanded="true" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapImmaterialSales" Width="1.875" PointX="10" PointY="2.75" Height="3.1340950520833317" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.queryForecastCliStatwithExceptions" Width="1.75" PointX="8" PointY="4" Height="3.1340950520833317" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapSalesImmaterialforForecastEdit" Width="2" PointX="12.5" PointY="0.5" Height="2.5571907552083331" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapForecast" Width="1.5" PointX="2.125" PointY="0.5" Height="3.7109993489583353" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapForecastStat" Width="1.5" PointX="3.875" PointY="0.625" Height="4.4802050781250031" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapSalesImmaterialforForecastEditStat" Width="2.25" PointX="12.375" PointY="3.75" Height="2.3648893229166674" />
+        <edmx:EntityTypeShape EntityType="ForecastModel.SapPricingAnalisysforForecast" Width="2.625" PointX="2.75" PointY="5.75" />
+      </edmx:Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
